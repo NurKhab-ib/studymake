@@ -1,1 +1,1 @@
-# info-project
+# StudyMake

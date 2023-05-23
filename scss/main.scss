@@ -1,0 +1,95 @@
+.main {
+    grid-area: main;
+
+    &__block {
+        margin-top: 100px;
+        text-align: center;
+    }
+}
+
+.block {
+    &__line {
+        border-bottom: 5px solid #000;
+        width: 200px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__title {
+        margin: 25px 0;
+        font: bold 50px "Montserrat", sans-serif;
+    }
+
+    &__subtitle {
+        font: 30px "Montserrat", sans-serif;
+    }
+
+    &__links {
+        display: flex;
+        justify-content: space-around;
+        margin: 50px 100px;
+    }
+
+    &__create-link {
+        font: 35px "Jost", sans-serif;
+        padding: 25px 15px;
+        color: #0032B4;
+        background-color: rgb(252, 255, 154);
+        
+        &:hover {
+            color: #022d99;
+            background-color: #FFE977;
+            box-shadow: 10px 10px 0 #ff876350;
+        }
+    }
+}
+
+.links {
+    &__elem {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-width: 200px;
+        min-height: 300px;
+        transition: all 0.3s ease 0s;
+
+        &:hover {
+            box-shadow: 15px 15px 0 rgba(0, 0, 0, .5);
+            transform: translate(-10px, -10px);
+            
+            & .links__elem-title {
+                font-size: 1.9em;
+            }
+        } 
+    }
+
+    &__elem-title {
+        font: 1.8em "Jost", sans-serif;
+        color: #fff;
+        margin-top: 50%;
+        transition: all 0.3s ease 0s;
+    }
+}
+
+#create-block {
+    .block__title {
+        margin: 25px 0 50px 0;
+    }
+}
+
+#it {
+    
+    background-image: url(../img/links/it.png);
+}
+
+#maths {
+    background-image: url(../img/links/maths.png);
+}
+
+#phy {
+    background-image: url(../img/links/phy.png);
+}
+
+#lit {
+    background-image: url(../img/links/lit.png);
+}

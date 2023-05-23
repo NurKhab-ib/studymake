@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <title>Главная - StudyMake</title>
+</head>
+<body>
+    <div class="wrapper">
+        <a href="#" id="scroll-top" class="fas fa-arrow-circle-up"></a>
+
+        <select name="language-switch" class="lang">
+            <option value="ru" selected>Рус</option>
+            <option value="en">Eng</option>
+        </select>
+
+        <header class="header noselect">
+            <div class="header__title lng-title-1">Учи</div>
+            <ul class="header__list">
+                <li><a href="#study-block" class="header__list-link lng-header-link-1">Изучить</a></li>
+                <li><a href="#create-block" class="header__list-link lng-header-link-2">Создать</a></li>
+            </ul>
+            <div class="header__title lng-title-2">Делай</div>
+        </header>
+        
+        <main class="main">
+            <div class="main__block block" id="study-block">
+                <div class="block__line"></div>
+                <div class="block__title lng-block-1-title">“Век живи - век учись”</div>
+                <div class="block__subtitle lng-block-subtitle">Выберите предмет для изучения:</div>
+                <div class="block__links links noselect">
+                    <a href="../html/it.html" class="links__elem" id="it">
+                        <div class="links__elem-title lng-it-title"><p>Информатика</p></div>
+                    </a>
+                    <a href="../html/maths.html" class="links__elem" id="maths">
+                        <div class="links__elem-title lng-maths-title">Математика</div>
+                    </a>
+                    <a href="../html/phy.html" class="links__elem" id="phy">
+                        <div class="links__elem-title lng-phy-title"><p>Физика</p></div>
+                    </a>
+                    <a href="../html/lit.html" class="links__elem" id="lit">
+                        <div class="links__elem-title lng-lit-title">Литература</div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="main__block block" id="create-block">
+                <div class="block__line"></div>
+                <div class="block__title lng-block-2-title">“Учение есть труд, полный мысли”</div>
+                <a href="#create-popup" class="block__create-link noselect lng-create-link popup-link">Создать тестирование</a>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="block__line"></div>
+            <div class="footer__title">О проекте</div>
+            <div class="footer__text lng-footer-text"></div>
+        </footer>
+
+        <div class="popups">
+            <div id="create-popup" class="popup">
+                <div class="popup__body">
+                  <div id="popup_c" class="popup__content">
+                    <a href="#" class="popup__close close-popup"><i class="fas fa-times"></i></a>
+                    <div class="popup__title">Создание новой работы</div>
+                    <div class="popup__line"></div>
+                    <form action="javascript:check();" name="test" class="test" id="test">
+                        <div class="popup__text">Введите вопрос №1:</div>
+                        <input type="text" name="task_1" id="que_1">
+
+                        <div class="popup__text">Ответ №1:</div>
+                        <input type="text" name="task_1" id="ans_1">
+                    </form>
+                    <!-- <img src="../img/" class="popup__img" alt=""> -->
+                  </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js?_v=20221213202336"></script>
+        <script src="https://kit.fontawesome.com/6c0ad7ea8a.js?_v=20221213202336" crossorigin="anonymous"></script>
+        <script src="js/script.js"></script>
+    </div>
+</body>
+</html> 

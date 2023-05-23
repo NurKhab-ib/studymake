@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,700;1,700&family=Montserrat:ital,wght@0,400;0,600;1,400&display=swap');
+
+@import './header.scss', './main.scss', './footer.scss', './popup.scss';
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    max-width: 100%;
+    height: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+        background-color: #252941;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: rgb(242, 255, 154);
+        cursor: pointer;
+        border-radius: 25px;
+        transition: all 0.3s ease 0s;
+    }
+}
+
+body {
+    &.lock {
+        overflow: hidden;
+    }
+}
+
+.wrapper {
+    display: grid;
+    background-color: #fff;
+    background: url('../img/bg.png');
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    // grid-template: minmax(100px, auto) 1fr minmax(70px, auto) / 1fr;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}
+
+.noselect {
+    user-select: none;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+    color: #000;
+}
+
+ol, ul {
+    // list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.lang {
+    cursor: pointer;
+    font: 25px "Jost", sans-serif;
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #FFE977;
+}
+
+#scroll-top {
+    color: rgba(0, 0, 0, 0.7);
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	z-index: 100;
+    text-align: center;
+    font-size: 70px;
+	opacity: 0.8;   
+    background-color: rgba(255, 255, 255, .8);
+    border-radius: 50%;
+
+    &.hide {
+        display: none;
+    }
+
+    &:hover {
+        opacity: 1;
+        color: #000;
+    }
+}
+
+.lng-warning {
+    font-family: 'Montserrat', sans-serif;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(255, 227, 166);
+    padding: 20px;
+    font-size: 15px;
+    text-align: center;
+    font-weight: 500;
+
+    i {
+        color: rgb(120, 0, 0);
+    }
+}
+
+@media (max-width: 980px) {
+    #scroll-top {
+        font-size: 50px;
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+@media (max-width: 980px) {
+    .fa-circle-down {
+        font-size: 55px;
+        margin-left: 45%;
+    }
+
+    .lng-warning {
+        font-size: 10px;
+        padding: 10px;
+    }
+}

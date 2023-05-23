@@ -1,0 +1,15 @@
+.footer {
+    grid-area: footer;
+    margin: 50px 100px;
+    text-align: center;
+
+    &__title {
+        font: bold 40px "Montserrat", sans-serif;
+        margin-top: 25px;
+    }
+
+    &__text {
+        font: 25px "Jost", sans-serif;
+        margin-top: 25px;
+    }
+}

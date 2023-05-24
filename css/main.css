@@ -1,5 +1,6 @@
 .main {
   grid-area: main;
+  margin: 0 120px;
 }
 .main__block {
   margin-top: 100px;
@@ -14,10 +15,10 @@
 }
 .block__title {
   margin: 25px 0;
-  font: bold 50px "Montserrat", sans-serif;
+  font: bold 55px "Montserrat", sans-serif;
 }
 .block__subtitle {
-  font: 30px "Montserrat", sans-serif;
+  font: 40px "Montserrat", sans-serif;
 }
 .block__links {
   display: flex;
@@ -34,6 +35,9 @@
   color: #022d99;
   background-color: #FFE977;
   box-shadow: 10px 10px 0 rgba(255, 135, 99, 0.3137254902);
+}
+.block__guide {
+  margin: 0 50px;
 }
 
 .links__elem {
@@ -56,6 +60,33 @@
   color: #fff;
   margin-top: 50%;
   transition: all 0.3s ease 0s;
+}
+
+.guide__elem {
+  text-align: center;
+  margin-top: 25px;
+  border: 7px solid #FFE977;
+  background-color: #FFF0A0;
+}
+.guide__elem-title {
+  font: bold 40px "Jost", sans-serif;
+  margin: 25px auto;
+  text-align: center;
+}
+.guide__elem-list {
+  list-style: none;
+  font: 30px "Jost", sans-serif;
+  background-color: #FFF4BB;
+  margin: 25px auto;
+}
+.guide__elem-link {
+  margin-top: 25px;
+  color: #0032B4;
+  text-decoration: underline;
+  transition: all 0.3s ease 0s;
+}
+.guide__elem-link:hover {
+  color: #022d99;
 }
 
 #create-block .block__title {

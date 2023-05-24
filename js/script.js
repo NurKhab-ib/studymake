@@ -19,9 +19,25 @@ $(function () {
 
 //? language changing
 const langArr = {
-    "doctitle": {
+    "doctitle-0": {
         "ru": "Главная - УчиДелай",
         "en": "Home - StudyMake",
+    },
+    "doctitle-1": {
+        "ru": "Информатика - УчиДелай",
+        "en": "Informatics - StudyMake",
+    },
+    "doctitle-2": {
+        "ru": "Математика - УчиДелай",
+        "en": "Maths - StudyMake",
+    },
+    "doctitle-3": {
+        "ru": "Физика - УчиДелай",
+        "en": "Physics - StudyMake",
+    },
+    "doctitle-4": {
+        "ru": "Литература - УчиДелай",
+        "en": "Literature - StudyMake",
     },
     "title-1": {
         "ru": "Учи",
@@ -41,7 +57,7 @@ const langArr = {
     },
     "it-title": {
         "ru": "Информатика",
-        "en": "IT",
+        "en": "Informatics",
     },
     "maths-title": {
         "ru": "Математика",
@@ -71,6 +87,46 @@ const langArr = {
         "ru": "Создать тестирование",
         "en": "Create a test",
     },
+    "it-guide-title": {
+        "ru": "“Работает - не трогай”",
+        "en": "“Don't touch if it works”",
+    },
+    "it-guide-subtitle": {
+        "ru": "Справочник по информатике",
+        "en": "Guide to Informatics",
+    },
+    "it-guide-elem-1-link-1": {
+        "ru": "§1. Информация и её свойства.",
+        "en": "§1. Information and its properties.",
+    },
+    "it-guide-elem-1-link-2": {
+        "ru": "§2. Информационные процессы.",
+        "en": "§2. Information processes.",
+    },
+    "it-guide-elem-1-link-3": {
+        "ru": "§3. Всемирная паутина.",
+        "en": "§3. The World Wide Web.",
+    },
+    "link-7-1-popup-title": {
+        "ru": "§1. Информация и её свойства.",
+        "en": "§1. Information and its properties.",
+    },
+    "link-7-1-popup-subtitle-1": {
+        "ru": "Информация и сигнал",
+        "en": "Information and signal",
+    },
+    "link-7-1-popup-subtitle-2": {
+        "ru": "Виды информации",
+        "en": "Types of information",
+    },
+    "link-7-1-popup-subtitle-3": {
+        "ru": "Свойства информации",
+        "en": "Information Properties",
+    },
+    "link-7-1-popup-test-subtitle": {
+        "ru": "Проверь знания",
+        "en": "Test your knowledge",
+    },
     "footer-text": {
         "ru": "<b>StudyMake</b> (УчиДелай) - платформа, созданная для объединения процесса получения знаний с их тестированием. Учащиеся образовательных учреждений смогут изучить материал по школьному предмету, а учителя и преподаватели - создать свой тест для проверки усвоения новой темы.",
         "en": "<b>StudyMake</b> is a platform created to combine the process of acquiring knowledge with their testing. Students of educational institutions can study material on a school subject, and teachers and teachers can create their own test to check the assimilation of a new topic.",
@@ -96,7 +152,7 @@ function changeLanguage() {
 		location.reload();
 	}
 	select.value = hash;
-
+    // document.querySelector("title").innerHTML = langArr.doctitle[hash];
 	for (let key in langArr) {
         let elem = document.querySelector('.lng-' + key);
         if (elem) {
@@ -106,6 +162,15 @@ function changeLanguage() {
 }
 
 changeLanguage();
+
+//? 'read more' button
+let more = document.querySelectorAll('.guide__elem-arrow');
+
+for (let i = 0; i < more.length; i++) {
+    more[i].addEventListener('click', function() {
+        more[i].parentNode.classList.toggle('active');
+    });
+}
 
 //? popup
 const popupLinks = document.querySelectorAll('.popup-link');
@@ -204,3 +269,5 @@ document.addEventListener('keydown', function (e) {
         popupClose(popupActive);
     }
 });
+
+//? quiz

@@ -1,5 +1,6 @@
 .main {
     grid-area: main;
+    margin: 0 120px;
 
     &__block {
         margin-top: 100px;
@@ -17,11 +18,11 @@
 
     &__title {
         margin: 25px 0;
-        font: bold 50px "Montserrat", sans-serif;
+        font: bold 55px "Montserrat", sans-serif;
     }
 
     &__subtitle {
-        font: 30px "Montserrat", sans-serif;
+        font: 40px "Montserrat", sans-serif;
     }
 
     &__links {
@@ -41,6 +42,10 @@
             background-color: #FFE977;
             box-shadow: 10px 10px 0 #ff876350;
         }
+    }
+    
+    &__guide {
+        margin: 0 50px;
     }
 }
 
@@ -70,6 +75,42 @@
         transition: all 0.3s ease 0s;
     }
 }
+
+.guide {
+    &__elem {
+        text-align: center;
+        margin-top: 25px;
+        border: 7px solid #FFE977;
+        background-color: #FFF0A0;
+
+        &-title {
+            font: bold 40px "Jost", sans-serif;
+            margin: 25px auto;
+            text-align: center;
+        }
+
+        &-list {
+            // display: none;
+            list-style: none;
+            font: 30px "Jost", sans-serif;
+            background-color: #FFF4BB;
+            margin: 25px auto;
+        }
+
+        &-link {
+            margin-top: 25px;
+            color: #0032B4;
+            text-decoration: underline;
+            transition: all 0.3s ease 0s;
+    
+            &:hover {
+                color: #022d99;
+            }
+        }
+    }
+}
+
+//? ids
 
 #create-block {
     .block__title {

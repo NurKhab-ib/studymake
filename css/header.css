@@ -1,13 +1,12 @@
 .header {
   grid-area: header;
-  width: 100%;
-  min-height: 500px;
-  color: #0032B4;
+  margin: 0 120px;
+  min-height: 600px;
 }
 .header__title {
   font: italic bold 120px "Jost", sans-serif;
-  text-shadow: 20px 20px 0 rgba(0, 51, 180, 0.1450980392);
-  text-align: center;
+  -webkit-animation: main-title 15s linear infinite;
+          animation: main-title 15s linear infinite;
 }
 .header__list {
   list-style: none;
@@ -39,8 +38,54 @@
 }
 
 .lng-title-1 {
-  margin-right: 200px;
+  text-align: left;
 }
 .lng-title-2 {
-  margin-left: 200px;
+  text-align: right;
+}
+
+@-webkit-keyframes main-title {
+  0% {
+    color: #0032B4;
+    text-shadow: 20px 20px 0 rgba(0, 51, 180, 0.1450980392);
+  }
+  25% {
+    color: #5a00b4;
+    text-shadow: 10px 10px 0 rgba(0, 51, 180, 0.1450980392);
+  }
+  50% {
+    color: #9f00b4;
+    text-shadow: 20px 20px 0 rgba(0, 51, 180, 0.1450980392);
+  }
+  75% {
+    color: #005db4;
+    text-shadow: 10px 10px 0 rgba(0, 51, 180, 0.1450980392);
+  }
+  100% {
+    color: #0032B4;
+    text-shadow: 20px 20px 0 rgba(0, 51, 180, 0.1450980392);
+  }
+}
+
+@keyframes main-title {
+  0% {
+    color: #0032B4;
+    text-shadow: 20px 20px 0 rgba(0, 51, 180, 0.1450980392);
+  }
+  25% {
+    color: #5a00b4;
+    text-shadow: 10px 10px 0 rgba(0, 51, 180, 0.1450980392);
+  }
+  50% {
+    color: #9f00b4;
+    text-shadow: 20px 20px 0 rgba(0, 51, 180, 0.1450980392);
+  }
+  75% {
+    color: #005db4;
+    text-shadow: 10px 10px 0 rgba(0, 51, 180, 0.1450980392);
+  }
+  100% {
+    color: #0032B4;
+    text-shadow: 20px 20px 0 rgba(0, 51, 180, 0.1450980392);
+  }
 }

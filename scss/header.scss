@@ -1,13 +1,11 @@
 .header {
     grid-area: header;
-    width: 100%;
-    min-height: 500px;
-    color: #0032B4;
+    margin: 0 120px;
+    min-height: 600px;
 
     &__title {
         font: italic bold 120px 'Jost', sans-serif;
-        text-shadow: 20px 20px 0 #0033b425;
-        text-align: center;
+        animation: main-title 15s linear infinite;
     }
 
     &__list {
@@ -48,10 +46,33 @@
 
 .lng-title {
     &-1 {
-        margin-right: 200px;
+        text-align: left;
     }
 
     &-2 {
-        margin-left: 200px;
+        text-align: right;
+    }
+}
+
+@keyframes main-title {
+    0% {
+        color: #0032B4;
+        text-shadow: 20px 20px 0 #0033b425;
+    }
+    25% {
+        color: #5a00b4;
+        text-shadow: 10px 10px 0 #0033b425;
+    }
+    50% {
+        color: #9f00b4;
+        text-shadow: 20px 20px 0 #0033b425;
+    }
+    75% {
+        color: #005db4;
+        text-shadow: 10px 10px 0 #0033b425;
+    }
+    100% {
+        color: #0032B4;
+        text-shadow: 20px 20px 0 #0033b425;
     }
 }

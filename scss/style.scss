@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,700;1,700&family=Montserrat:ital,wght@0,400;0,600;1,400&display=swap');
 
-@import './header.scss', './main.scss', './footer.scss', './popup.scss';
+@import './header.scss', './main.scss', './footer.scss', './popup.scss', './quiz.scss';
 
 *,
 *::before,
@@ -93,6 +93,19 @@ ol, ul {
     &:hover {
         opacity: 1;
         color: #000;
+    }
+}
+
+.fa-circle-chevron-left {
+    font-size: 60px;
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    border: none;
+    opacity: 0.8;
+
+    &:hover {
+        opacity: 1;
     }
 }
 
